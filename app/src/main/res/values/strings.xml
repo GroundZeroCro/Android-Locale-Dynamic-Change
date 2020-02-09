@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Android Locale Change</string>
+    <string name="hello_world">Hello world</string>
+    <string name="croatian">Croatian</string>
+    <string name="italian">Italian</string>
+    <string name="spanish">Spanish</string>
+    <string name="change_your_application_language">Change your application language:</string>
+</resources>
