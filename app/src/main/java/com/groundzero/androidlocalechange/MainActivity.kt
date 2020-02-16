@@ -66,6 +66,15 @@ class MainActivity : AppCompatActivity() {
         super.attachBaseContext(updateBaseContextLocale(newBase!!))
     }
 
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+        if (overrideConfiguration != null) {
+            val uiMode = overrideConfiguration.uiMode
+            overrideConfiguration.setTo(baseContext.resources.configuration)
+            overrideConfiguration.uiMode = uiMode
+        }
+        super.applyOverrideConfiguration(overrideConfiguration)
+    }
+
     private fun updateBaseContextLocale(context: Context): Context? {
 
         persistenceUtils ?: let {
